@@ -22,4 +22,20 @@ In case “yum” is asking for a missing public key, you can download it here a
 
 After importing the public key, please execute the “yum”-command again to install the TeamViewer rpm.
 
+--------------------------------------------------
+service teamviewerd start
 
+systemctl enable teamviewerd.service
+
+------------------Bug Fix-------------------------
+sudo systemctl stop teamviewerd.service
+
+systemctl status teamviewerd.service
+
+sudo mv -i /etc/systemd/system/teamviewerd.service /usr/lib/systemd/system/
+
+sudo systemctl daemon-reload
+
+sudo systemctl disable /opt/teamviewer8/tv_bin/script/teamviewerd.service
+
+sudo systemctl start teamviewerd.service
