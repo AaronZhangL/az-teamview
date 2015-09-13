@@ -1,0 +1,25 @@
+
+https://www.teamviewer.com/en/help/363-How-do-I-install-TeamViewer-on-my-Linux-distribution.aspx
+
+http://download.teamviewer.com/download/teamviewer.i686.rpm
+http://www.teamviewer.com/link/?url=354858
+
+
+RedHat, CentOS, Fedora, SUSE
+
+You need the teamviewer.i686.rpm package.
+
+For installing TeamViewer, we recommend using the graphical installer.
+
+If you prefer to use the command line or if there is no graphical installer available you can use either one of these commands as an administrator:
+
+    yum install teamviewer.i686.rpm (recommended, as it will install missing dependencies)
+    rpm -i teamviewer.i686.rpm
+
+In case “yum” is asking for a missing public key, you can download it here and import the key by using following command as an administrator:
+
+    rpm --import TeamViewer_Linux_PubKey.asc
+
+After importing the public key, please execute the “yum”-command again to install the TeamViewer rpm.
+
+
